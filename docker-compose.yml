@@ -1,0 +1,16 @@
+version: "2"
+services:
+  app:
+    build: .
+    links:
+      - db
+    ports:
+      - "5000:5000"
+  db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      DATABASE_URL: mysql://anonymous:@ensembldb.ensembl.org:3306/ensembl_website_97
+    volumes:
+     - ./db_volume:/var/lib/mysql
