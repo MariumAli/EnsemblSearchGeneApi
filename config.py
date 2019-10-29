@@ -10,3 +10,4 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://anonymous:@ensembldb.ensembl.org:3306/ensembl_website_97"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = True
+    TESTING = False

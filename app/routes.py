@@ -29,7 +29,7 @@ def searchGene(name, species):
                     'species' : gene.species
                 })
 
-            return jsonify(result=output), '200'
+            return jsonify(result=output), 200
         except:
             return 'Unable to execute query', 400
     else:
