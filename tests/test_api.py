@@ -3,13 +3,8 @@ import pytest
 import requests
 
 # The root url of the flask app
-
 url = 'http://127.0.0.1:5000'
-@pytest.fixture
-def app():
-    """ Provides an instance of our Flask app """
-    from app import create_app
-    return create_app('test')
+
 
 def test_search_api_valid_gene_name_prefix():
     # search for a valid gene name prefix
