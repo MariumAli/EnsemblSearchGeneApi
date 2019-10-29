@@ -1,20 +1,9 @@
-sudo: true
-
-language:
-  - python
-
+language: python
 python:
-  - 3.7.2
-#
-#virtualenv:
-#  system_site_packages: true
-
+  - "3.7"
+# command to install dependencies
 install:
   - pip install -r requirements.txt
-
-script: pytest
-
-after_script: cd ~
-
-notifications:
-  email: true
+# command to run tests
+script:
+  - pytest
