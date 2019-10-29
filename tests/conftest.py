@@ -1,6 +1,5 @@
 import pytest
 
-from app import db
 from flask import Flask
 
 
@@ -13,4 +12,5 @@ def app():
 
 @pytest.fixture
 def db():
+    from app import db
     return db
