@@ -10,7 +10,7 @@ def app():
     return create_app('test')
 
 
-@pytest.fixture
-def db():
-    from app import db
-    return db
+# @pytest.fixture
+# def db():
+#     from app import db
+#     return db
