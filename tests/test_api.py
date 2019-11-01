@@ -3,7 +3,7 @@ import pytest
 import requests
 
 # The root url of the flask app
-url = 'http://127.0.0.1:5000'
+url = 'http://0.0.0.0:5000'
 
 
 def test_search_api_valid_gene_name_prefix():

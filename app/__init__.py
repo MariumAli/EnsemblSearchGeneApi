@@ -8,11 +8,12 @@ db = SQLAlchemy()
 
 def create_app(enviornment):
     """Construct the core application."""
-    app = Flask(__name__)
+    app = Flask(__name__, static_url_path = "")
     app.config.from_object(Config)
 
     if enviornment == 'test':
         app.config['TESTING'] = True
+        return app
 
     db.init_app(app)
     with app.app_context():

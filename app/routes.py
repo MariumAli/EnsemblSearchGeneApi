@@ -4,9 +4,9 @@ from app.models import GeneAutoComplete, db
 from sqlalchemy import func
 
 
-@app.route('/', methods=['GET'])
-@app.route('/<name>', defaults={'species': None})
-@app.route('/<name>/<species>')
+# Will automatically return 405 for all except get
+@app.route('/<name>', defaults={'species': None}, methods=['GET'])
+@app.route('/<name>/<species>', methods=['GET'])
 def searchGene(name, species):
 
     # name = request.args.get('name')
@@ -36,6 +36,6 @@ def searchGene(name, species):
         return 'Query parameters do not satisfy requirements', 400
 
 
-# @app.route('/', methods=['POST', 'PUT', 'DELETE', 'PATCH'])
-# def invalidRequest():
-#     return 'Invalid Request Type', 405
+@app.route('/', methods=['GET'])
+def welcome():
+    return ' Welcome to Search Gene API.', 200
