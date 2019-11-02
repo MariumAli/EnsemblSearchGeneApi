@@ -1,4 +1,7 @@
+
 sudo: required
+services:
+  - docker
 language: python
 python:
   - "3.7"
@@ -9,3 +12,6 @@ install:
 script:
   - python main.py >> log.txt 2>&1 &
   - pytest
+after_success:
+  - sh .travis/deploy_dockerhub.sh
+#  - test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy_heroku.sh
