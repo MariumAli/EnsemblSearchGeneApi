@@ -14,4 +14,7 @@ script:
   - pytest
 after_success:
   - sh .travis/deploy_dockerhub.sh
-#  - test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy_heroku.sh
+deploy:
+  provider: heroku
+  api_key:
+    secure: "763dca60-e159-4e3b-a7ae-e2815ca8d4cf"
