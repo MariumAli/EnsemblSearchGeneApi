@@ -14,7 +14,7 @@ script:
   - pytest
 after_success:
   - sh .travis/deploy_dockerhub.sh
-deploy:
-  provider: heroku
-  api_key:
-    secure: "763dca60-e159-4e3b-a7ae-e2815ca8d4cf"
+#deploy:
+#  provider: heroku
+#  api_key:
+#    secure: "763dca60-e159-4e3b-a7ae-e2815ca8d4cf"
