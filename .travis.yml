@@ -19,5 +19,3 @@ deploy:
   api_key:
     secure: 763dca60-e159-4e3b-a7ae-e2815ca8d4cf
   app: ensembl-search-gene-api
-  
-
